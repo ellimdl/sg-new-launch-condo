@@ -1,0 +1,6 @@
+.condos-center {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    gap: 20px;
+    justify-content: center;
+  }
