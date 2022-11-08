@@ -14,16 +14,12 @@ export default function LoanSearch(props) {
     console.log(`name: ${name}, value: ${value}`);
     setInput({ ...input, [name]: value });
     console.log(input);
+    props.handleSearchInput(input); // Raise the input object to the parent component
   };
 
   const handleSubmit = () => {
     console.log("Submit loan calculator info ");
-    props.handleSearchInput(input);
-    setInput({
-      loanAmount: "",
-      interestRate: "",
-      durationYears: "",
-    });
+    props.handleOnSubmit();
   };
   return (
     <section className="search">
