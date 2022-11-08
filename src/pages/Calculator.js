@@ -22,6 +22,7 @@ export default function Calculator() {
     const onSubmitQuery = async (query) => {
       const NinjaUrl = `https://api.api-ninjas.com/v1/mortgagecalculator?loan_amount=${query.loanAmount}&interest_rate=${query.interestRate}&duration_years=${query.durationYears}`;
       const authToken = process.env.REACT_APP_NINJA_API_KEY;
+      console.log(authToken);
       try {
         console.log(`onSubmitQuery is executed. Query: `, query);
         const res = await fetch(NinjaUrl, {
