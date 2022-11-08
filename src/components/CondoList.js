@@ -1,11 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import Condo from "./Condo";
 import Loading from "./Loading";
-import { useGlobalContext } from "../context";
 // import "./CondoList.css";
 
-export default function CondoList() {
-  const { condos, loading } = useGlobalContext();
+export default function CondoList({condos}) {
+  console.log('condos', condos);
+  const [loading, setLoading] = useState(false);
+
   if (loading) {
     return <Loading />;
   }

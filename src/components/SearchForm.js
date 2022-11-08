@@ -1,7 +1,6 @@
 import React from "react";
-import { useGlobalContext } from "../context";
-export default function SearchForm() {
-  const { setSearchTerm } = useGlobalContext();
+export default function SearchForm({filterCondo}) {
+
   const searchValue = React.useRef("");
 
   React.useEffect(() => {
@@ -9,7 +8,8 @@ export default function SearchForm() {
   }, []);
 
   function searchCondo() {
-    setSearchTerm(searchValue.current.value);
+    // setSearchTerm(searchValue.current.value);
+    filterCondo(searchValue.current.value);
   }
   function handleSubmit(e) {
     e.preventDefault();
