@@ -125,7 +125,7 @@ const results = [
     noOfCondo: 306,
     developerName: "Winville Investment Pte Ltd",
     totalUnits: 306,
-    img: "https://pic2.99.co/v3/eCX4MFmZadqLK7Yu7kJASL?sampling=lanczos&version=1&mode=fill&signature=2577eaf8641f345b3e70a937c31c439118b15b09",
+    img: "https://www.condo.com.sg/wp-content/uploads/2022/09/Yuan-Ching-Road-Condo-at-Lakeside-Garden-by-Chip-Eng-Seng.jpg",
   },
   {
     noOfApartment: 748,
@@ -139,7 +139,7 @@ const results = [
     noOfCondo: 0,
     developerName: "Boulevard Development Pte Ltd/Boulevard Midtown Pte Ltd",
     totalUnits: 748,
-    img: "https://pic2.99.co/v3/eCX4MFmZadqLK7Yu7kJASL?sampling=lanczos&version=1&mode=fill&signature=2577eaf8641f345b3e70a937c31c439118b15b09",
+    img: "https://marinaviewresidences.com/files/folder_web_4282/images/marinaview-landsite-MJI300.jpg",
   },
   {
     noOfApartment: 0,
@@ -603,6 +603,7 @@ const results = [
     noOfCondo: 0,
     developerName: "Areca Investment Pte Ltd",
     totalUnits: 774,
+    img: "https://www.capitaland.com/content/dam/capitaland-media-library/residential/Singapore/Singapore/one-pearl-bank/Sora_Dayview.jpg.transform/cap-midres/image.jpg",
   },
   {
     noOfApartment: 527,
@@ -616,6 +617,7 @@ const results = [
     noOfCondo: 0,
     developerName: "Frasers Property Quayside Pte Ltd",
     totalUnits: 527,
+    img: "https://riviere-official.com.sg/wp-content/uploads/2015/04/Riviere-Facade-2.jpg",
   },
   {
     noOfApartment: 265,
@@ -629,6 +631,7 @@ const results = [
     noOfCondo: 0,
     developerName: "FSKH Development Pte Ltd",
     totalUnits: 265,
+    img: "https://daryllum.com/wp-content/uploads/2019/09/The-Antares-by-FSKH-Development-800x600.jpg",
   },
   {
     noOfApartment: 219,

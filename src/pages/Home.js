@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CondoList from "../components/CondoList";
 import SearchForm from "../components/SearchForm";
-import results from "../results";
+import results from "../results2";
 
 export default function Home() {
   const [fullDataSet] = useState(results); // load full dataset

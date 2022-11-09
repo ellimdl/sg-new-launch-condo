@@ -1,7 +1,7 @@
 import React from "react";
 // import Loading from "../components/Loading";
 import { useParams, Link } from "react-router-dom";
-import results from "../results";
+import results from "../results2";
 
 export default function SingleCondo() {
   const { project } = useParams();
@@ -20,9 +20,11 @@ export default function SingleCondo() {
       <div className="card">
         <img
           src={
-            "https://pic2.99.co/v3/HxGavpKkBATCQkmjQkjPJe?mode=fill&text=&sampling=lanczos&quality=80&version=1&is_watermark=True&signature=8c92addbfac9effb45ff37e20dfe0cbeeabd5ccb&width=1600"
+            singleCondoObj.img
+              ? singleCondoObj.img
+              : "https://c4.wallpaperflare.com/wallpaper/745/584/835/apartment-architecture-building-condo-wallpaper-preview.jpg"
           }
-          alt={""}
+          alt={"Building"}
         ></img>
         <div className="card-info">
           <p>

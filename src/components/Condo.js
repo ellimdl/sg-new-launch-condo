@@ -6,11 +6,11 @@ export default function Condo(props) {
       <div className="img-container">
         <img
           src={
-            "https://pic2.99.co/v3/HxGavpKkBATCQkmjQkjPJe?mode=fill&text=&sampling=lanczos&quality=80&version=1&is_watermark=True&signature=8c92addbfac9effb45ff37e20dfe0cbeeabd5ccb&width=1600"
+            props.img
+              ? props.img
+              : "https://c4.wallpaperflare.com/wallpaper/745/584/835/apartment-architecture-building-condo-wallpaper-preview.jpg"
           }
-          alt={
-            "https://pic2.99.co/v3/HxGavpKkBATCQkmjQkjPJe?mode=fill&text=&sampling=lanczos&quality=80&version=1&is_watermark=True&signature=8c92addbfac9effb45ff37e20dfe0cbeeabd5ccb&width=1600"
-          }
+          alt={"Building"}
         />
       </div>
       <div className="condo-footer">
