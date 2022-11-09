@@ -505,7 +505,7 @@ const results = [
     noOfCondo: 0,
     developerName: "Oxley Spinel Pte Ltd",
     totalUnits: 548,
-    img: "http://www.kentridgehillresidence.sg/wp-content/uploads/2018/09/kent-ridge-hill-residences_perspective-1024x588.jpg",
+    img: "https://www.kentridgehillresidence.sg/wp-content/uploads/2018/09/kent-ridge-hill-residences_perspective-1024x588.jpg",
   },
   {
     noOfApartment: 0,

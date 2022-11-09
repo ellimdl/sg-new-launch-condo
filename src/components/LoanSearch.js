@@ -17,7 +17,7 @@ export default function LoanSearch(props) {
   };
 
   const handleSubmit = () => {
-    console.log("Submit loan calculator info ");
+    // console.log("Submit loan calculator info ");
     props.handleOnSubmit();
   };
   return (
