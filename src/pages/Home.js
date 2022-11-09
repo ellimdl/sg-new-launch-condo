@@ -9,8 +9,8 @@ export default function Home() {
 
   // on submit to filter
   const filterCondo = (searchTerm) => {
-    console.log("full dataset:", fullDataSet);
-    console.log("filter Condo by search term:", searchTerm);
+    // console.log("full dataset:", fullDataSet);
+    // console.log("filter Condo by search term:", searchTerm);
 
     // if "1" received, add "0" in front of it, else return as it is
     searchTerm = searchTerm.length === 1 ? "0" + searchTerm : searchTerm;
@@ -18,7 +18,7 @@ export default function Home() {
     const data = fullDataSet.filter(
       (element) => element.district === searchTerm
     );
-    console.log("filtered data:", data);
+    // console.log("filtered data:", data);
     setFiltered(data);
   };
 

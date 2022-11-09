@@ -1,13 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Condo from "./Condo";
-import Loading from "./Loading";
 
 export default function CondoList({ condos }) {
-  console.log("condos", condos);
-  const [loading, setLoading] = useState(false);
-  if (loading) {
-    return <Loading />;
-  }
+  // console.log("filtered list of condos", condos);
+
   if (condos.length < 1) {
     return (
       <h2 className="section-title">

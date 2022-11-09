@@ -11,9 +11,8 @@ export default function LoanSearch(props) {
   const handleChange = (element) => {
     const name = element.target.name;
     const value = element.target.value;
-    console.log(`name: ${name}, value: ${value}`);
+    // console.log(`name: ${name}, value: ${value}`);
     setInput({ ...input, [name]: value });
-    console.log(input);
     props.handleSearchInput(input);
   };
 
