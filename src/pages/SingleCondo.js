@@ -6,7 +6,7 @@ import results from "../results";
 export default function SingleCondo() {
   const { project } = useParams();
   let index = results.findIndex(function (element) {
-    return element.project == project;
+    return element.project === project;
   });
   let singleCondoObj = results[index];
 
