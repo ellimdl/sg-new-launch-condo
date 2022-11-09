@@ -1,7 +1,7 @@
 import React from "react";
 import LoanSearch from "../components/LoanSearch";
 import LoanResults from "../components/LoanResults";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Calculator() {
   const [query, setQuery] = useState({
@@ -13,32 +13,33 @@ export default function Calculator() {
   const [hasSearched, setHasSearched] = useState(false);
 
   const handleSearchInput = (input) => {
-    setHasSearched(true);
-    setQuery(input);
+    setQuery(input); //input will set some time in the future because it is async
     console.log(`query: `, input);
   };
 
-  useEffect(() => {
-    const onSubmitQuery = async (query) => {
-      const NinjaUrl = `https://api.api-ninjas.com/v1/mortgagecalculator?loan_amount=${query.loanAmount}&interest_rate=${query.interestRate}&duration_years=${query.durationYears}`;
-      const authToken = process.env.REACT_APP_NINJA_API_KEY;
-      try {
-        console.log(`onSubmitQuery is executed. Query: `, query);
-        const res = await fetch(NinjaUrl, {
-          method: "GET",
-          headers: {
-            "X-Api-Key": authToken,
-          },
-        });
-        const json = await res.json();
-        console.log("NinjaLoanJson: ", json);
-        setCalculatorOutput(json);
-      } catch {
-        console.log(`API error`);
-      }
-    };
+  const handleOnSubmit = () => {
+    setHasSearched(true);
     onSubmitQuery(query);
-  }, [query]);
+  };
+
+  const onSubmitQuery = async (query) => {
+    const NinjaUrl = `https://api.api-ninjas.com/v1/mortgagecalculator?loan_amount=${query.loanAmount}&interest_rate=${query.interestRate}&duration_years=${query.durationYears}`;
+    const authToken = process.env.REACT_APP_NINJA_API_KEY;
+    try {
+      console.log(`onSubmitQuery is executed. Query: `, query);
+      const res = await fetch(NinjaUrl, {
+        method: "GET",
+        headers: {
+          "X-Api-Key": authToken,
+        },
+      });
+      const json = await res.json();
+      console.log("NinjaLoanJson: ", json);
+      setCalculatorOutput(json);
+    } catch {
+      console.log(`API error`);
+    }
+  };
 
   const onSearchAgain = () => {
     setHasSearched(false);
@@ -54,7 +55,10 @@ export default function Calculator() {
           calculatorOutput={calculatorOutput}
         />
       ) : (
-        <LoanSearch handleSearchInput={handleSearchInput} />
+        <LoanSearch
+          handleSearchInput={handleSearchInput}
+          handleOnSubmit={handleOnSubmit}
+        />
       )}
     </section>
   );
