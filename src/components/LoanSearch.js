@@ -1,19 +1,23 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function LoanSearch(props) {
-  const [input, setInput] = useState({
+  const defaultInputState = {
     loanAmount: "",
     interestRate: "",
     durationYears: "",
-  });
+  };
+  const [input, setInput] = useState(defaultInputState);
+
+  useEffect(()=>{    
+    props.handleSearchInput(input); 
+  },[input])
 
   const handleChange = (element) => {
     const name = element.target.name;
     const value = element.target.value;
     // console.log(`name: ${name}, value: ${value}`);
-    setInput({ ...input, [name]: value });
-    props.handleSearchInput(input);
+    setInput({ ...input, [name]: value });           
   };
 
   const handleSubmit = () => {
